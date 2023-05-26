@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.grid-container {
+  columns: 5 250px;
+  column-gap: 1.25rem;
+}
+
+.grid-container > * {
+  display: inline-block;
+  width: 100%;
+  column-break-inside: avoid;
+}
+
+.card {
+  @apply mb-5 rounded-3xl p-6;
+}
+
+.form-item {
+  @apply w-full flex flex-col justify-start items-start my-4;
+}
+
+.form-label,
+.form-control {
+  @apply w-full;
+}
+
+.form-label {
+  @apply font-semibold text-black sm:pl-3;
+}
+
+.form-control input,
+.form-control textarea,
+.form-control select {
+  @apply w-full bg-white text-black text-lg my-2 leading-loose px-3 rounded-xl font-semibold focus:ring-4 focus:ring-black focus:outline-double focus:outline-black;
+}
+
+.form-control p {
+  @apply text-red-500 font-semibold;
+}
